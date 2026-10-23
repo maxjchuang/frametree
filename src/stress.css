@@ -1,0 +1,244 @@
+.stress-page {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: #10160f;
+}
+.stress-header {
+  flex-shrink: 0;
+  gap: 24px;
+}
+.stress-header a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #b5d89e;
+  text-decoration: none;
+  font-size: 12px;
+}
+.stress-header > div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.stress-header span {
+  color: #819875;
+  font-size: 11px;
+}
+.stress-settings {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 25px;
+  border-bottom: 1px solid #34402c;
+  flex-wrap: wrap;
+}
+.stress-settings label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: #a9bd9c;
+}
+.stress-settings select {
+  background: #202a1b;
+  border: 1px solid #3e5032;
+  padding: 7px;
+  border-radius: 5px;
+}
+.stress-switches {
+  display: flex;
+  gap: 18px;
+  margin-left: auto;
+}
+.stress-switches input {
+  accent-color: #b6e497;
+}
+.stress-metrics {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 15px 25px;
+  background: #1b2417;
+  border-bottom: 1px solid #3b4a31;
+  flex-wrap: wrap;
+}
+.stress-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.stress-metric small {
+  font-size: 10px;
+  color: #99b18a;
+}
+.stress-metric b {
+  font-size: 23px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  color: #d0edb9;
+}
+.stress-metric.warning b {
+  color: #ffb27e;
+}
+.stress-content {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+}
+.stress-canvas {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+}
+.stress-guide {
+  width: 290px;
+  flex-shrink: 0;
+  padding: 25px 22px;
+  overflow: auto;
+  background: #192115;
+  border-left: 1px solid #35432b;
+}
+.stress-guide h2 {
+  font-size: 25px;
+  line-height: 1.4;
+  margin: 12px 0 24px;
+}
+.stress-guide ol {
+  padding-left: 18px;
+  color: #bdd4ad;
+}
+.stress-guide li {
+  margin-bottom: 22px;
+}
+.stress-guide li b {
+  font-size: 12px;
+}
+.stress-guide p {
+  font-size: 11px;
+  line-height: 1.8;
+  color: #9bb38c;
+}
+.stress-facts {
+  padding: 13px;
+  background: #222e1b;
+  border: 1px solid #405134;
+  border-radius: 6px;
+}
+.stress-facts b {
+  font-size: 12px;
+}
+.stress-facts small {
+  font-size: 10px;
+  color: #7d966d;
+  line-height: 1.7;
+}
+.stress-note {
+  margin-top: 20px;
+}
+.stress-card {
+  width: 300px;
+  height: 230px;
+  background: #242f1e;
+  border: 1px solid #51663e;
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px #0004;
+}
+.stress-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+.stress-card > div {
+  padding: 9px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.stress-card span {
+  font-size: 8px;
+  letter-spacing: 1px;
+  color: #b0cb98;
+}
+.stress-card b {
+  font-size: 12px;
+  font-weight: 500;
+}
+.stress-card small {
+  font-size: 8px;
+  color: #819d6c;
+}
+.stress-empty {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  pointer-events: none;
+  padding: 25px;
+  text-align: center;
+}
+.stress-empty > b {
+  font-size: 28px;
+  color: #c6e4b2;
+}
+.stress-empty p {
+  color: #92a981;
+  line-height: 1.8;
+}
+.stress-view-buttons {
+  position: absolute;
+  top: 15px;
+  left: 16px;
+  display: flex;
+  gap: 10px;
+}
+.stress-view-buttons button {
+  background: #27351edb;
+  border: 1px solid #51673d;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 11px;
+}
+.stress-metrics > button {
+  margin-left: auto;
+}
+@media (max-width: 1000px) {
+  .stress-switches {
+    margin-left: 0;
+  }
+  .stress-metrics {
+    gap: 15px;
+  }
+  .stress-guide {
+    width: 240px;
+  }
+  .stress-header span {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .stress-guide {
+    display: none;
+  }
+  .stress-metrics {
+    padding: 10px;
+  }
+  .stress-metric b {
+    font-size: 17px;
+  }
+  .stress-settings {
+    gap: 10px;
+    padding: 10px;
+  }
+  .stress-header {
+    padding: 10px;
+  }
+  .stress-header > div b {
+    font-size: 11px;
+  }
+}

@@ -61,6 +61,7 @@ import {
   saveProject,
   toDataURL,
 } from "./storage";
+import { StressCanvas } from "./stress";
 import "@xyflow/react/dist/style.css";
 import "./style.css";
 type FrameNode = Node<Frame, "frame">;
@@ -499,6 +500,14 @@ function App() {
                 </div>
                 <div className="canvas-tools">
                   <button
+                    onClick={() => {
+                      window.location.href = "?stress=1";
+                    }}
+                    title="打开独立性能压力场景"
+                  >
+                    压力测试
+                  </button>
+                  <button
                     title="自动排列树"
                     onClick={() => {
                       setProject((p) => ({
@@ -818,7 +827,11 @@ function App() {
 createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ReactFlowProvider>
-      <App />
+      {new URLSearchParams(window.location.search).has("stress") ? (
+        <StressCanvas />
+      ) : (
+        <App />
+      )}
     </ReactFlowProvider>
   </React.StrictMode>,
 );
